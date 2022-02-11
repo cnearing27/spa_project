@@ -157,52 +157,60 @@ function drawGraf(num, currentArray, currentDates, sizeFont) {
 
 threeMonths.onclick = function() {
   let currentArray = [],
-  currentDates = [];
+  currentDates = [],
+  currentPlan = [];
   for (let p = 0; p < 3; p++) {
     currentArray[p] = fact[21 + p];
-    currentDates[p] = dates[21 + p];
+    currentDates[p] = dates[21 + p]
+    currentPlan[p] = fact[21 + p] / plan[21 + p];
   }
   d3.select('svg').remove();
   d3.select('svg').remove();
-  drawLine(21, currentArray);
+  drawLine(21, currentPlan);
   drawGraf(21, currentArray, currentDates, 20);
   }
 
 sixMonths.onclick = function() {
   let currentArray = [],
-  currentDates = [];
+  currentDates = [],
+  currentPlan = [];
   for (let p = 0; p < 6; p++) {
     currentArray[p] = fact[18 + p];
     currentDates[p] = dates[18 + p];
+    currentPlan[p] = fact[18 + p] / plan[18 + p];
   }
   d3.select('svg').remove();
   d3.select('svg').remove();
-  drawLine(18, currentArray);
+  drawLine(18, currentPlan);
   drawGraf(18, currentArray, currentDates, 20);
   }
 
 oneYear.onclick = function() {
   let currentArray = [],
-  currentDates = [];
+  currentDates = [],
+  currentPlan = [];
   for (let p = 0; p < 12; p++) {
     currentArray[p] = fact[12 + p];
     currentDates[p] = dates[12 + p];
+    currentPlan[p] = fact[12 + p] / plan[12 + p];
   }
   d3.select('svg').remove();
   d3.select('svg').remove();
-  drawLine(12, currentArray);
+  drawLine(12, currentPlan);
   drawGraf(12, currentArray, currentDates, 14);
   }
 
 twoYears.onclick = function() {
   let currentArray = [],
-  currentDates = [];
+  currentDates = [],
+  currentPlan = [];
   for (let p = 0; p < 24; p++) {
     currentArray[p] = fact[p];
     currentDates[p] = dates[p];
+    currentPlan[p] = fact[p] / plan[p];
   }
   d3.select('svg').remove();
   d3.select('svg').remove();
-  drawLine(0, currentArray);
+  drawLine(0, currentPlan);
   drawGraf(0, currentArray, currentDates, 8);
   }
