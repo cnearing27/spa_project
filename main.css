@@ -1,0 +1,84 @@
+@font-face {
+	font-family: "VK Sans";
+	src: url("./font.otf");
+	}
+
+ html {
+	height: 100%;
+	float: left;
+	-webkit-font-smoothing: antialiased;
+  }
+
+  body {
+	background-color: white;
+	color: black;
+	position: relative;
+	max-width: 540px;
+	min-height: 100%;
+	margin: 0 auto;
+	font-family: "VK Sans";
+	letter-spacing: 2px;
+	box-sizing: border-box;
+	padding: 36px;
+  }
+
+  h1 {
+	  text-align: left;
+	  font-size: 30px;
+	  font-weight: bold;
+  }
+
+  table {
+	  text-align: left;
+	  font-size: 15px;
+  }
+
+  .result {
+	font-size: 35px;
+	font-weight: bold;
+	padding: 0;
+  }
+
+  .buttons {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	color: #2D6C74;
+  }
+
+  .button {
+	width: 15%;
+	height: 8%;
+	padding: 5px 10px 5px 10px;
+	box-sizing: border-box;
+	text-align: center;
+	font-size: 14px;
+	cursor: pointer;
+	transition: opacity 0.2s;
+  }
+
+  .button:hover {
+	background-color: #2D6C74;
+	color: white;
+	border-radius: 25%;
+	box-shadow: 1px 2px 3px 2px #C8DBDD;
+  }
+
+  .bar > rect {
+	stroke-width: 0;
+  }
+
+  .x-axis > .tick > text {
+	transform: translate(-8px, 15px) rotate(-45deg);
+  }
+
+  .x-axis {
+    stroke: #C7C7CC;
+    shape-rendering: crispedges;
+    stroke-opacity: 0.2;
+}
+
+.x-axis text {
+    color: black;
+	font-weight: bold;
+}
